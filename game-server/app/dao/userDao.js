@@ -268,7 +268,7 @@ userDao.createUser = function (username, password, from, cb){
  * @param {function} cb Callback function
  */
 userDao.createPlayer = function (uid, name, roleId,cb){
-	var sql = 'insert into Player (userId, kindId, kindName, name, country, rank, level, experience, attackValue, defenceValue, hitRate, dodgeRate, walkSpeed, attackSpeed, hp, mp, maxHp, maxMp, areaId, x, y, skillPoint) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
+	var sql = 'insert into Player (userId, kindId, kindName, name, country, `rank`, level, experience, attackValue, defenceValue, hitRate, dodgeRate, walkSpeed, attackSpeed, hp, mp, maxHp, maxMp, areaId, x, y, skillPoint) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
 	//var role = dataApi.role.findById(roleId);
 	var character = dataApi.character.findById(roleId);
   var role = {name: character.englishName, career: 'warrior', country: 1, gender: 'male'}
